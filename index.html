@@ -1,174 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Bootstrap Admin Template</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/sb-admin.css" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="css/plugins/morris.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <div id="wrapper">
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header" id="top-bar">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Yelp Outlier Detection</a>
-            </div>
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="index.html">MDS Result</a>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Yelp Outlier Detection</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" integrity="sha384-XXXXXXXX" crossorigin="anonymous">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+        <link href="css/select.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash-compat/3.10.1/lodash.min.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js" ></script>
+        <script type="text/javascript" src="js/select.js"></script>
+	</head>
+	<body>
+<div id="header" class="navbar navbar-default navbar-fixed-top">
+    <img src="img/logo.png" alt="Yelp logo" style="width:102px;height:50px;">
+    <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <i class="icon-reorder"></i>
+        </button>
+        <a class="navbar-brand" id="title">
+            Yelp Outlier Detection
+        </a>
+    </div>
+    <nav class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+        </ul>
+    </nav>
+</div>
+<div id="wrapper">
+  <div id="sidebar-wrapper" class="col-md-4">
+            <div id="sidebar">
+                <ul class="nav list-group">
+                    <li>
+                        <a id="left-title">Feature Comparison Filter</a>
                     </li>
                     <li>
-                        <a href="#">Attribute 1</a>
+                        <a class="list-group-item" id="attributes"></a>
                     </li>
                     <li>
-                        <a href="#">Attribute 2</a>
+                        <a class="list-group-item" href="#" id="attributes">avg_star</a>
                     </li>
                     <li>
-                        <a href="#">Attribute 3</a>
+                        <a class="list-group-item" href="#" id="attributes">votes</a>
                     </li>
                     <li>
-                        <a href="#">Attribute 4</a>
-                    </li>
-                    <li>
-                        <a href="#">Attribute 5</a>
+                        <a class="list-group-item" href="#" id="attributes">text_length</a>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
-        </nav>
-
-        <div id="page-wrapper">
-
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Statistics Overview
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li class="active">
-                                Cluster 1
-                            </li>
-                            <li class="active">
-                                Cluster 2
-                            </li>
-                            <li class="active">
-                                Cluster 3
-                            </li>
-                            <li class="active">
-                                Cluster 4
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <!-- /.row -->
-                <!-- /.row -->
-
-                <div class="row">
-                </div>
-                <!-- /.row -->
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
-
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Donut Chart</h3>
-                            </div>
-                            <div class="panel-body">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Bar Chart</h3>
-                            </div>
-                            <div class="panel-body">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Multiple Chart</h3>
-                            </div>
-                            <div class="panel-body">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
-
-            </div>
-            <!-- /.container-fluid -->
-
+      <svg id="pie_chart"> </svg>
         </div>
-        <!-- /#page-wrapper -->
+        <div id="main-wrapper" class="col-md-8 pull-right">
+            <div id="main">
+              <div class="page-header">
+                <h3 id="right-title">T-SNE Chart</h3>
+              </div>
+<!--
+                <ul id="clusters" class="clusters">
+                    <button class="btn btn-primary" type="submit">Cluster 1</button>
+                    <button class="btn btn-primary" type="submit">Cluster 2</button>
+                    <button class="btn btn-primary" type="submit">Cluster 3</button>
+                    <button class="btn btn-primary" type="submit">Cluster 4</button>
+                    <button class="btn btn-primary" type="submit">Cluster 5</button>
+                </ul>
+-->
+                <div class="row" id="charts">
+<!--                    <div class="col-md-12">-->
+                    <div class="result">    
+                    <svg id="viz"></svg>
+<!--                    </div>-->
+                    </div>
+                    <div class="row">
+                        <div class="col-border col-md-12">
+                            <div class="comparison">cluster间最大最小比较图</div>
 
-    </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Morris Charts JavaScript -->
-    <script src="js/plugins/morris/raphael.min.js"></script>
-    <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="js/plugins/morris/morris-data.js"></script>
-
-</body>
-
+    <!--
+                            <div class="card-block">
+                              <img class="card-img-top" data-src="..." alt="Card image cap">
+                              <div class="card-block">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              </div>
+                            </div>
+    -->
+                        </div>
+                    </div>
+              <p></p>
+            </div>
+        </div>
+</div>
+        </div>
+	<!-- script references -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" integrity="sha384-XXXXXXXX" crossorigin="anonymous"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
 </html>
