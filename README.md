@@ -5,7 +5,7 @@ Reviews in Yelp play important role in making purchase decisions and help people
 
 <h3>The data</h3>
 
-All the data is provided by Yelp via json file format. It includs business, checkin, review, user, tip datasets. We will find out some features thar are related to user behavior to get a matrix by using data transformation.
+All the data is provided by Yelp in terms of json file format. It includs business, checkin, review, user, tip datasets. We will find out some features thar are related to user behavior to get a matrix by using data transformation.
 
 
 <h3>Live demo</h3>
